@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,8 +34,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQ1-8n-s43">
+                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favourite Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6A-S7-UGx">
+                                <rect key="frame" x="20" y="234" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNV-7v-Yzc">
-                                <rect key="frame" x="100" y="214" width="175" height="30"/>
+                                <rect key="frame" x="100" y="314" width="175" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1640625" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -42,7 +55,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42Y-W7-8zs">
-                                <rect key="frame" x="84" y="284" width="207" height="30"/>
+                                <rect key="frame" x="84" y="384" width="207" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1640625" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Show Data"/>
                                 <connections>
@@ -56,19 +69,27 @@
                             <constraint firstAttribute="trailing" secondItem="5vI-hP-q52" secondAttribute="trailing" constant="20" id="34I-V6-S4T"/>
                             <constraint firstItem="42Y-W7-8zs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="84" id="9ao-7b-lMb"/>
                             <constraint firstAttribute="trailing" secondItem="i4b-ZS-wDo" secondAttribute="trailing" constant="20" id="Bvg-zB-RMC"/>
+                            <constraint firstItem="k6A-S7-UGx" firstAttribute="leading" secondItem="RQ1-8n-s43" secondAttribute="leading" id="ESR-nN-qWX"/>
                             <constraint firstItem="i4b-ZS-wDo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ktl-Ss-7y4"/>
-                            <constraint firstItem="PNV-7v-Yzc" firstAttribute="top" secondItem="5vI-hP-q52" secondAttribute="bottom" constant="50" id="S95-Ds-Hkn"/>
+                            <constraint firstItem="k6A-S7-UGx" firstAttribute="top" secondItem="RQ1-8n-s43" secondAttribute="bottom" constant="20" id="MWW-7g-uEI"/>
                             <constraint firstItem="42Y-W7-8zs" firstAttribute="top" secondItem="PNV-7v-Yzc" secondAttribute="bottom" constant="40" id="Y0b-Le-SDc"/>
                             <constraint firstAttribute="trailing" secondItem="PNV-7v-Yzc" secondAttribute="trailing" constant="100" id="aYO-6X-I6U"/>
+                            <constraint firstItem="k6A-S7-UGx" firstAttribute="trailing" secondItem="RQ1-8n-s43" secondAttribute="trailing" id="cGP-2g-oFr"/>
                             <constraint firstItem="PNV-7v-Yzc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="cJs-bL-BUe"/>
                             <constraint firstItem="5vI-hP-q52" firstAttribute="top" secondItem="i4b-ZS-wDo" secondAttribute="bottom" constant="20" id="dJ6-ET-2ds"/>
+                            <constraint firstItem="RQ1-8n-s43" firstAttribute="top" secondItem="5vI-hP-q52" secondAttribute="bottom" constant="20" id="fao-hU-xIb"/>
+                            <constraint firstItem="RQ1-8n-s43" firstAttribute="trailing" secondItem="5vI-hP-q52" secondAttribute="trailing" id="gkS-Fc-PZC"/>
+                            <constraint firstItem="PNV-7v-Yzc" firstAttribute="top" secondItem="k6A-S7-UGx" secondAttribute="bottom" constant="50" id="hxx-TF-gVt"/>
                             <constraint firstItem="i4b-ZS-wDo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="myY-rv-CZw"/>
                             <constraint firstAttribute="trailing" secondItem="42Y-W7-8zs" secondAttribute="trailing" constant="84" id="oK9-hv-GYG"/>
+                            <constraint firstItem="RQ1-8n-s43" firstAttribute="leading" secondItem="5vI-hP-q52" secondAttribute="leading" id="sAV-pO-BnL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GGU-Vs-dpN"/>
                     <connections>
                         <outlet property="passWord" destination="5vI-hP-q52" id="HTg-LO-tAd"/>
+                        <outlet property="studentNM" destination="RQ1-8n-s43" id="dC9-4f-Edm"/>
+                        <outlet property="subject" destination="k6A-S7-UGx" id="hz3-hO-E6m"/>
                         <outlet property="username" destination="i4b-ZS-wDo" id="Xht-zu-sAP"/>
                     </connections>
                 </viewController>
@@ -92,13 +113,41 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" id="6vC-yc-F0B">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" id="6vC-yc-F0B" customClass="TableViewCell" customModule="CoreDataDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vC-yc-F0B" id="8wc-mj-bO8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orw-Y2-9YI">
+                                                    <rect key="frame" x="16" y="0.0" width="169" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXW-wT-F2U">
+                                                    <rect key="frame" x="193" y="0.0" width="168.5" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IXW-wT-F2U" firstAttribute="leading" secondItem="orw-Y2-9YI" secondAttribute="trailing" constant="8" id="2Nl-j9-34Q"/>
+                                                <constraint firstItem="orw-Y2-9YI" firstAttribute="leading" secondItem="8wc-mj-bO8" secondAttribute="leading" constant="16" id="4eM-Tl-2RB"/>
+                                                <constraint firstItem="orw-Y2-9YI" firstAttribute="bottom" secondItem="8wc-mj-bO8" secondAttribute="bottom" id="6uW-ag-zTS"/>
+                                                <constraint firstItem="orw-Y2-9YI" firstAttribute="top" secondItem="8wc-mj-bO8" secondAttribute="top" id="HQ0-Zk-HUO"/>
+                                                <constraint firstItem="orw-Y2-9YI" firstAttribute="width" secondItem="8wc-mj-bO8" secondAttribute="width" multiplier="0.45" id="QR2-ui-vbl"/>
+                                                <constraint firstItem="IXW-wT-F2U" firstAttribute="width" secondItem="orw-Y2-9YI" secondAttribute="width" id="Snr-gY-hl2"/>
+                                                <constraint firstItem="IXW-wT-F2U" firstAttribute="top" secondItem="orw-Y2-9YI" secondAttribute="top" id="et7-X7-oBb"/>
+                                                <constraint firstItem="IXW-wT-F2U" firstAttribute="bottom" secondItem="orw-Y2-9YI" secondAttribute="bottom" id="iDW-1b-mI1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbl1" destination="orw-Y2-9YI" id="tcd-GC-hC2"/>
+                                            <outlet property="lbl2" destination="IXW-wT-F2U" id="f9S-Sy-X0U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

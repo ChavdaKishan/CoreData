@@ -20,9 +20,10 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! TableViewCell
         let name = userArray[indexPath.row]
-        cell.textLabel!.text = name.userName! + " " + name.passWord!
+        cell.lbl1.text = name.userName!
+        cell.lbl2.text = name.passWord!
         return cell
     }
     func featchData()
