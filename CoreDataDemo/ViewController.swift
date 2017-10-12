@@ -33,6 +33,7 @@ class ViewController: UIViewController
                 print("Please Insert all Fields")
             }
         }
+        
         // Insert Second Entity
         if studentNM.text != "" && subject.text != ""
         {
@@ -60,11 +61,8 @@ class ViewController: UIViewController
     // MARK : - Display
     @IBAction func Display(_ sender: Any)
     {
-        if username.text != "" && passWord.text != "" && studentNM.text != "" && subject.text != ""
-        {
-            let data = storyboard?.instantiateViewController(withIdentifier: "TableView") as! TableViewController
-            self.navigationController?.pushViewController(data, animated: true)
-        }
+        let data = storyboard?.instantiateViewController(withIdentifier: "TableView") as! TableViewController
+        self.navigationController?.pushViewController(data, animated: true)
         username.text = ""
         passWord.text = ""
         studentNM.text = ""

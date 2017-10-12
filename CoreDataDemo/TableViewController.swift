@@ -15,6 +15,7 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.featchData2()
         self.TableView.reloadData()
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
